@@ -16,32 +16,7 @@
     </li>
   </ul>
 </nav>
-<!-- <div>
-  <h4> {{ images[currentPage].title}} </h4>
+<div >
+  <h4 appClass> {{ images[currentPage].title}} </h4>
   <img [src]="images[currentPage].url" alt="unsplash.com">
-</div> -->
-@switch (currentPage) {
-  @case (0) {
-    <div>
-      Current Page is zero
-    </div>
-  }
-
-  @case (2) {
-    <div>
-      Current Page is one
-    </div>
-  }
-
-  @case (3) {
-    <div>
-      Current Page is two
-    </div>
-  }
-
-  @default {
-    <div>
-      Unknown current page!
-    </div>
-  }
-}
+</div>

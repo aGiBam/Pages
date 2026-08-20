@@ -7,6 +7,7 @@ import { Component } from '@angular/core';
   styleUrl: './app.css'
 })
 export class App {
+  currentPage = 0;
   images = [
     {
       title: 'Beach',

@@ -3,12 +3,20 @@
     <li class="page-item" [class]="{disabled: currentPage == 0}">
       <a class="page-link" (click)="currentPage = currentPage - 1">Prev</a>
     </li>
+    <ng-container>
     @for (image of images; track $index) {
-    <li [class]="{'active': $index === currentPage}">
-      <a (click)="currentPage = $index" class="page-link" (click)="currentPage = $index">{{ $index + 1 }}</a></li>
-    }
-     <li class="page-item" [class]="{disabled: currentPage == images.length - 1}">
+      @if (checkWindowIndex($index)){
+      <li [class]="{'active': $index === currentPage}">
+        <a (click)="currentPage = $index" class="page-link" (click)="currentPage = $index">{{ $index + 1 }}</a>
+      </li>
+      }}
+      </ng-container>
+    <li class="page-item" [class]="{disabled: currentPage == images.length - 1}">
       <a class="page-link" (click)="currentPage = currentPage + 1">Next</a>
     </li>
   </ul>
 </nav>
+<div>
+  <h4> {{ images[currentPage].title}} </h4>
+  <img [src]="images[currentPage].url" alt="unsplash.com">
+</div>

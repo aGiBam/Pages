@@ -1,10 +1,9 @@
 import { Component } from '@angular/core';
-import { NgSwitch } from "../../node_modules/@angular/common/types/_common_module-chunk";
 import { Class } from "./class";
-
+import { Times } from "./times";
 @Component({
   selector: 'app-root',
-  imports: [Class],
+  imports: [Class, Times],
   templateUrl: './app.html',
   styleUrl: './app.css'
 })

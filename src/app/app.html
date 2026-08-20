@@ -7,7 +7,7 @@
     @for (image of images; track $index) {
       @if (checkWindowIndex($index)){
       <li [class]="{'active': $index === currentPage}">
-        <a (click)="currentPage = $index" class="page-link" (click)="currentPage = $index">{{ $index + 1 }}</a>
+        <a (click)="currentPage = $index" class="page-link">{{ $index + 1 }}</a>
       </li>
       }}
       </ng-container>
@@ -17,6 +17,6 @@
   </ul>
 </nav>
 <div >
-  <h4 appClass> {{ images[currentPage].title}} </h4>
+  <h4 appClass [backgroundColor]="'red'"> {{ images[currentPage].title}} </h4>
   <img [src]="images[currentPage].url" alt="unsplash.com">
 </div>
